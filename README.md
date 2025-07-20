@@ -1,10 +1,10 @@
-# 📊 Loan Default Analysis using Power BI
+# Loan Default Analysis using Power BI
 An end-to-end data analysis project built using Power BI that explores patterns in loan defaults. The project includes data ingestion from SQL Server via Dataflow, transformation in Power Query, DAX-based analytics, and interactive report creation. The report is published to Power BI Service with scheduled and incremental refresh configured.
 
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Financial institutions need to assess the risk of loan defaults effectively. This project helps in:
 - Identifying patterns in loan defaults.
@@ -14,7 +14,7 @@ Financial institutions need to assess the risk of loan defaults effectively. Thi
 
 ---
 
-## 📊 Data Source
+## Data Source
 
 - **Original Data**: Imported into **SQL Server**.
 - **Connected via**: **Power BI Dataflow** (to simulate live/enterprise data environments).
@@ -24,7 +24,7 @@ Financial institutions need to assess the risk of loan defaults effectively. Thi
 
 ---
 
-## 🛠 Tools & Technologies
+## Tools & Technologies
 
 - **Power BI Desktop**
 - **Power BI Service**
