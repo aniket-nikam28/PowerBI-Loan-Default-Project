@@ -16,7 +16,7 @@ Financial institutions need to assess the risk of loan defaults effectively. Thi
 
 ## Data Source
 
-- **Original Data**: Imported into **SQL Server**.
+- **Loan Default Dataset**: Imported into **SQL Server**.
 - **Connected via**: **Power BI Dataflow** (to simulate live/enterprise data environments).
 - **File Format**: CSV (`Loan_default.csv`)
 - **Size**: ~200,000 records
@@ -36,9 +36,9 @@ Financial institutions need to assess the risk of loan defaults effectively. Thi
 
 ---
 
-## 📈 Key Visualizations & Insights
+## Key Visualizations & Insights
 
-| Report Page | Insight | DAX Functions Used |
+| Visuals | Insight | DAX Functions Used |
 |-------------|--------|--------------------|
 | **Loan Amount by Purpose** | Total loan distributed by loan types (e.g., car, personal) | `SUMX`, `FILTER`, `NOT`, `ISBLANK` |
 | **Average Income by Employment** | Compares income across employment types | `CALCULATE`, `AVERAGE`, `ALLEXCEPT` |
@@ -52,31 +52,16 @@ Financial institutions need to assess the risk of loan defaults effectively. Thi
 
 ---
 
-## 🧠 DAX Highlights
 
-- `YOY_Loan_Amount = CALCULATE([TotalLoan], SAMEPERIODLASTYEAR('Date'[Date]))`
-- `DefaultRate = DIVIDE(COUNTROWS(Defaulted), COUNTROWS(TotalLoans))`
-- `MedianLoan = MEDIANX(FILTER('Loans', NOT(ISBLANK([LoanAmount]))), [LoanAmount])`
-
-📂 All major DAX measures are included in [`DAX-snippets/`](DAX-snippets/).
 
 ---
 
-## 🔄 Dataflow & Gateway Setup
+##  Dataflow & Gateway Setup
 
-Detailed guide available at [`docs/Dataflow_Gateway_Setup.md`](docs/Dataflow_Gateway_Setup.md) which includes:
 - Installing SQL Server and importing data
 - Creating a Dataflow in Power BI Service
 - Setting up a Standard Mode On-prem Gateway
 - Scheduling automatic and incremental refresh
 
 ---
-
-## 🚀 How to Use This Project
-
-1. **Clone the repo**:
-
-   ```bash
-   git clone https://github.com/aniketnikam/loan-default-powerbi.git
-   cd loan-default-powerbi
 
